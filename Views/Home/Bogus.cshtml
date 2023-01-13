@@ -1,0 +1,15 @@
+﻿@model string[]
+@{
+    ViewData["Title"] = "Bogus page";
+    var date = (System.DateTime) ViewBag.Date;
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>this is bogus made by @ViewData["author"], on @date.ToShortDateString()</p>
+
+    <ul>
+    @foreach (var item in Model)
+    {
+        <li>@item</li>
+    }
+    </ul>
